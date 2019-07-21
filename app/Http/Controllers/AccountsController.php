@@ -18,7 +18,6 @@ class AccountsController extends Controller
     }
 
     public function store(Account $account){
-        //dd(request());
         $data = request()->validate([
             'name'=>'required|min:3',
             'balance'=>'numeric'
@@ -26,5 +25,9 @@ class AccountsController extends Controller
 
         $account->create($data);
         return redirect('/');
+    }
+
+    public function show(Account $account){
+        return view('accounts.show',compact('account'));
     }
 }

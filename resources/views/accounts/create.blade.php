@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<form action="/accounts" method="post">
+<form action="/account" method="post">
     @csrf
     <div class="form-group">
         <label for="accountName">Account Name</label>

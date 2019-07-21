@@ -15,10 +15,14 @@ class CreateTransactionsTable extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('income');
-            $table->integer('expense');
-            $table->integer('transfer');
+            $table->unsignedInteger('account_id');
+            $table->integer('income')->nullable();
+            $table->integer('expense')->nullable();
+            $table->integer('transfer')->nullable();
+            $table->date('date');
             $table->timestamps();
+
+            $table->foreign('account_id')->references('id')->on('accounts')->onDelete('cascade');
         });
     }
 

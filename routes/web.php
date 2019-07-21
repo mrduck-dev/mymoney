@@ -12,8 +12,12 @@
 */
 
 Route::get('/', 'AccountsController@index');
-Route::get('/accounts/create', 'AccountsController@create');
-Route::post('/accounts', 'AccountsController@store');
+Route::get('/account/create', 'AccountsController@create');
+Route::post('/account', 'AccountsController@store');
+Route::get('/account/{account}','AccountsController@show');
+
+Route::get('/transactions','TransactionsController@create');
+Route::post('/transactions','TransactionsController@store');
 
 Auth::routes();
 
