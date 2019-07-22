@@ -16,8 +16,9 @@ Route::get('/account/create', 'AccountsController@create');
 Route::post('/account', 'AccountsController@store');
 Route::get('/account/{account}','AccountsController@show');
 
-Route::get('/transactions','TransactionsController@create');
+Route::get('/transactions/create','TransactionsController@create');
 Route::post('/transactions','TransactionsController@store');
+Route::get('/transactions','TransactionsController@show');
 
 Auth::routes();
 

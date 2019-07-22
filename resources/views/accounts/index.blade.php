@@ -11,7 +11,7 @@
 
     <div>
         <ul class="list-unstyled">
-            <li><a href="/transactions">Add New Transaction</a></li>
+            <li><a href="/transactions/create">Add New Transaction</a></li>
         </ul>
     </div>
 @endsection
